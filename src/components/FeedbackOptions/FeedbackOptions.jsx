@@ -2,14 +2,17 @@ import PropTypes from 'prop-types';
 import { Button } from './FeedbackOptions.styled';
 
 export const FeedbackOptions = ({ options, onFeedbackClick }) => {
+  const optionList = Object.keys(options);
+
   return (
     <>
-      {options.map(option => {
+      {optionList.map(option => {
         return (
           <Button
             type="button"
-            onClick={() => onFeedbackClick(option)}
+            onClick={onFeedbackClick}
             key={option}
+            name={option}
           >
             {option}
           </Button>
@@ -20,7 +23,6 @@ export const FeedbackOptions = ({ options, onFeedbackClick }) => {
 };
 
 FeedbackOptions.propTypes = {
-  options: PropTypes.arrayOf(
-    PropTypes.string).isRequired,
+  feedback: PropTypes.object,
   onFeedbackClick: PropTypes.func.isRequired,
 };

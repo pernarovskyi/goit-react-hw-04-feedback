@@ -9,18 +9,18 @@ export const Statistic = ({
   positivePercentage,
 }) => {
   return (
-   <>
-     <List>
-      <ListItem>Good: {good}</ListItem>
-      <ListItem>Neutral: {neutral}</ListItem>
-      <ListItem>Bad: {bad}</ListItem>      
-    </List>
+    <>
+      <List>
+        <ListItem>Good: {good}</ListItem>
+        <ListItem>Neutral: {neutral}</ListItem>
+        <ListItem>Bad: {bad}</ListItem>
+      </List>
 
-    <List>
+      <List>
         <ListItem>Total: {total}</ListItem>
-      <ListItem>Positive feedback: {positivePercentage} %</ListItem>
-    </List>
-   </>
+        <ListItem>Positive feedback: {positivePercentage} %</ListItem>
+      </List>
+    </>
   );
 };
 
